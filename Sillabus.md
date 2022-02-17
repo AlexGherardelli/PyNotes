@@ -28,3 +28,10 @@
 - alberi n-ari, alberi da directory, (semplificazione algebrica, derivazione NO), alberi di gioco: gioco dei resti, gioco della fusione di coppie di pari/dispari ... 
 - Albero di gioco del tris/filetto, strategie di vincita 
 - Ottimizzazione della generazione di configurazioni nel filetto, semplificazione algebrica e derivazione, rotazione ricorsiva di immagni 
+
+
+## Programma ripasso
+Lunedì: BSF, DSF and matrix/image manipulation
+Martedì: Albero n-ario, Filesystem, Ricorsione
+Mercoledì: Problem solving
+Giovedì: Problem solving
