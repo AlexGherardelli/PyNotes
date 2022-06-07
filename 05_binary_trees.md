@@ -170,6 +170,8 @@ def get_nodes_at_depth(tree, depth, nodes=[]):
 ## Filesystem as tres
 **Remember: all methods are easily available on the documentatio**
 
+```shutils``` is also a module that could come in handy when dealing with files and folders
+
 
 ```python
 import os

@@ -9,7 +9,7 @@
 - Something on strings
 
 **Dictionaries**
-- Sorting
+- SortingP
 
 **Tuples**
 - zip method? 
@@ -22,7 +22,7 @@
 
 
 
-## Lists
+# Lists
 Lists are mutable collections of items. 
 
 
@@ -141,7 +141,7 @@ List comprehensions are a compact syntactic construct available in Python to cre
  [expression for item in list if condition]
  ```
 
-## Dictionaries
+# Dictionaries
 
 Dictionaries are  **mutable** data structures comprised of key-value pairs. They are good to quickly accessing data by its key. From Python 3.7 onward, the order of the dictionary is preserved.
 
@@ -297,15 +297,45 @@ def cerca_multicolonna_lineare(ag, query):
     # torno l'elenco di record
     return risultato
 
+```
+## Sorting Dictionaries 
 
+### Sort a list of dictionaries by value
+```python
+lst = [{"age": 12, "name": "Bob"},{"name": "Alice", "age": 15}, {"name": "Charlie", "age": 9}]
+sorted(lst, lambda d: d["age"])
+
+# [{'name': 'Charlie', 'age': 9},
+ #{'age': 12, 'name': 'Bob'},
+ #{'name': 'Alice', 'age': 15}]
 
 ```
-## Tuples
+### Sort a list of dictionary by single key
+```python
+dicts = [{1:2, 3:4}, {3:4}, {5:6, 7:8}]
+keys = [5, 3, 1]
+sorted(dicts, key=lambda d: [k in d for k in keys], reverse=True)
+# [{5: 6, 7: 8}, {1: 2, 3: 4}, {3: 4}]
+```
+
+
+
+### Sort a list of dictionary by multiple keys
+
+```python
+dicts = [{1:2, 3:4}, {3:4}, {5:6, 7:8}]
+keys = [5, 3, 1]
+sorted(dicts, key=lambda d: [k in d for k in keys], reverse=True)
+# [{5: 6, 7: 8}, {1: 2, 3: 4}, {3: 4}]
+```
+
+
+# Tuples
 Tuples are like lists and they can store all sorts of objects (e.g. strings, integers, dictionaries, other tuples), but they are **immutable**. 
 
 They are useful when you want to group a bunch of values together (e.g. x y coordinates) and never change them.
 
-## Strings
+# Strings
 Strings are **immutable**, but there are a lot of useful methods for string manipulation. 
 
 **Convert cases***
@@ -337,7 +367,7 @@ Strings are **immutable**, but there are a lot of useful methods for string mani
 
 
 
-## Sets
+# Sets
 Sets are a **mutable** type and they are very useful to remove duplicates in Python and to perform set operations like intersection and union 
 
 ```python
