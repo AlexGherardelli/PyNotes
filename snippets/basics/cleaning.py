@@ -39,10 +39,14 @@ def keep_numbers(file):
         f = f.readlines()
         for line in f:
             filtered = list(map(int, filter(lambda x: x.isnumeric(), line)))
+            # alternative:
+            # filtered = [int(e) for e in line if e.isnumeric()]
             if len(filtered) > 0:
                 strings = "".join(list(map(str, filtered)))
                 cleaned.append(int(strings))
     return cleaned
+
+
 
 
 f = keep_numbers("file.txt")
