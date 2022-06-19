@@ -88,6 +88,24 @@ class BinaryTree:
         return cls(V, sx, dx)
 
 
+class AlberoNArio:
+    # MAI inizializzare un valore di default con un valore mutabile
+    def __init__(self, valore, figli=None):
+        "Ogni nodo contiene un valore e puÃ² avere dei figli"
+        if figli is None:                       # MEGLIO: se il valore non Ã¨ stato passato
+            figli = []                          # lo inizializzo qui con una nuova lista vuota
+        self._valore = valore
+        self._figli = figli
+
+    def __repr__(self, livello=0):
+        "stringa usata per stampare il nodo (con indentazione)"
+        risultato = '|--'*livello + f"AlberoNArio({self._valore},...)"
+        for son in self._figli:     # per ogni figlio
+            # aggiungo una riga con il figlio piÃ¹ indentato
+            risultato += '\n' + son.__repr__(livello+1)
+        return risultato
+
+
 if __name__ == '__main__':
     lista = [1, [2, None, None],
              [3, [4, None, None],
