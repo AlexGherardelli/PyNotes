@@ -7,4 +7,3 @@ def to_binary(n, result=""):
     return to_binary(n // 2, result)
 
 
-print(to_binary(10))
