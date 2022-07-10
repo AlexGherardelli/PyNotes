@@ -20,5 +20,8 @@ def longest_streak(lst, item_to_find):
         except IndexError:
             result.append(count)
             count = 0
-    return result
+    return max(result)
+
+
+print(longest_streak(lst, (255, 255, 255)))
 
